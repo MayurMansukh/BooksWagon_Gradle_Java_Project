@@ -12,8 +12,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static com.bridgelabz.base.Base.logger;
-
 public class Bookswagon_cart_popup {
 
     public WebDriver driver;
@@ -43,7 +41,7 @@ public class Bookswagon_cart_popup {
     }
 
     public void addToCart() {
-        logger.info("add product into cart");
+
         searchText.sendKeys("Horror");
         searchBtn.click();
         BooksSelect.click();
@@ -52,13 +50,13 @@ public class Bookswagon_cart_popup {
     }
 
     public void changeQuantity() {
-        logger.info("click cart btn");
+
         CartBtn.click();
 
     }
 
     public void updateQuantity() throws InterruptedException {
-        logger.info("update quantity");
+
         driver.switchTo().frame(1);
         WebElement textbox = driver.findElement(By.xpath("//*[@id=\"BookCart_lvCart_ctrl0_txtQty\"]"));
         textbox.sendKeys(Keys.BACK_SPACE);

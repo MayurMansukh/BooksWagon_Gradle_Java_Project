@@ -10,8 +10,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static com.bridgelabz.base.Base.logger;
-
 public class LoginPage {
     WebDriver driver;
     @FindBy(xpath = "//*[@id=\"ctl00_divLogin\"]/ul/li[1]/a")
@@ -38,33 +36,33 @@ public class LoginPage {
     }
 
     public void clickLogin() {
-        logger.info("click login Btn");
+
         login.click();
     }
 
     public void enterUserName(String username) {
-        logger.info("enter user name");
+
         userName.sendKeys(username);
     }
 
     public void enterPassword(String Password) {
-        logger.info("enter password");
+
         password.sendKeys(Password);
     }
 
     public boolean clickSubmitBtn() {
-        logger.info("click submit btn");
+
         submitBtn.click();
         return true;
     }
 
     public void clickLogoutopt() {
-        logger.info("click user profile opt");
+
         logoutopt.click();
     }
 
     public void clickLogoutBtn() {
-        logger.info("click logout btn");
+
         logoutBtn.click();
     }
 

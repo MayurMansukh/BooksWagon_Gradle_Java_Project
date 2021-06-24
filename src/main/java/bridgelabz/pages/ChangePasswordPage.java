@@ -1,6 +1,6 @@
 package bridgelabz.pages;
 
-import com.bridgelabz.base.Base;
+import bridgelabz.base.Base;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -36,7 +36,7 @@ public class ChangePasswordPage extends Base {
 
 
     public void user_login(String userName,String password){
-        logger.info("user loging");
+
         LoginPage loginPage =  new LoginPage(driver);
         loginPage.clickLogin();
         loginPage.enterUserName(userName);
@@ -45,7 +45,7 @@ public class ChangePasswordPage extends Base {
     }
 
     public void click_change_Password_btn(){
-        logger.info("click user change_Password opt");
+
         myprofile.click();
         changePassword.click();
     }

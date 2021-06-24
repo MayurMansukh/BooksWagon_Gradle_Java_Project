@@ -1,7 +1,7 @@
 package test;
 
-import com.bridgelabz.base.Base;
-import com.bridgelabz.pages.ChangePasswordPage;
+import bridgelabz.base.Base;
+import bridgelabz.pages.ChangePasswordPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -18,4 +18,4 @@ public class ChangePasswordTest  extends Base {
         changePassword.click_submit_cancel_Btn();
         Assert.assertEquals(driver.getCurrentUrl(),"https://www.bookswagon.com/changepassword.aspx");
     }
-}a
+}

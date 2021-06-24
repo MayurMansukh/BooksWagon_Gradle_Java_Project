@@ -5,7 +5,7 @@
  */
 package bridgelabz.pages;
 
-import com.bridgelabz.base.Base;
+import bridgelabz.base.Base;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -47,7 +47,7 @@ public class ProfileEditPage extends Base {
     }
 
     public void user_login(String userName,String password){
-        logger.info("user loging");
+
         LoginPage loginPage =  new LoginPage(driver);
         loginPage.clickLogin();
         loginPage.enterUserName(userName);
@@ -56,25 +56,25 @@ public class ProfileEditPage extends Base {
     }
 
     public void click_account_setting_btn(){
-        logger.info("click user profile opt");
+
         myprofile.click();
         personal_setting.click();
     }
 
     public void click_edit_btn(){
-        logger.info("click edit btn");
+
         editBtn.click();
     }
 
     public void enter_details(String fName,String lName,String fax){
-        logger.info("enter user profile details");
+
         firstName.sendKeys(fName);
         lastName.sendKeys(lName);
         faxNo.sendKeys(fax);
     }
 
     public void enterPhone(String phoneNo) {
-        logger.info("replace new phone no");
+
         for (int i=1 ; i<=10; i++) {
             phone.sendKeys(Keys.BACK_SPACE);
         }
@@ -83,12 +83,12 @@ public class ProfileEditPage extends Base {
     }
 
     public void click_submit_btn(){
-        logger.info("click submit btn");
+
         editSubmitBtn.click();
     }
 
     public void click_cancel_btn(){
-        logger.info("click submit btn");
+
         editCancelBtn.click();
     }
 }
